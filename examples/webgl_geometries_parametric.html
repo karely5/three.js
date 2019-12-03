@@ -29,8 +29,8 @@
 
 				var container = document.getElementById( 'container' );
 
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.y = 400;
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 10, 2000 );
+				camera.position.y = 200;
 
 				scene = new THREE.Scene();
 
@@ -58,18 +58,18 @@
 				geometry = new THREE.ParametricBufferGeometry( ParametricGeometries.plane( 100, 100 ), 10, 10 );
 				geometry.center();
 				object = new THREE.Mesh( geometry, material );
-				object.position.set( - 200, 0, 200 );
+				object.position.set( - 200, 0, -200 );
 				scene.add( object );
 
 				geometry = new THREE.ParametricBufferGeometry( ParametricGeometries.klein, 20, 20 );
 				object = new THREE.Mesh( geometry, material );
-				object.position.set( 0, 0, 200 );
+				object.position.set( 100, 50, -200 );
 				object.scale.multiplyScalar( 5 );
 				scene.add( object );
 
 				geometry = new THREE.ParametricBufferGeometry( ParametricGeometries.mobius, 20, 20 );
 				object = new THREE.Mesh( geometry, material );
-				object.position.set( 200, 0, 200 );
+				object.position.set( -200, -100, 200 );
 				object.scale.multiplyScalar( 30 );
 				scene.add( object );
 
@@ -86,15 +86,15 @@
 				tube = new THREE.BufferGeometry().fromGeometry( tube );
 
 				object = new THREE.Mesh( torus, material );
-				object.position.set( - 200, 0, - 200 );
+				object.position.set( - 200, 100, - 200 );
 				scene.add( object );
 
 				object = new THREE.Mesh( sphere, material );
-				object.position.set( 0, 0, - 200 );
+				object.position.set( -100, 250, - 200 );
 				scene.add( object );
 
 				object = new THREE.Mesh( tube, material );
-				object.position.set( 200, 0, - 200 );
+				object.position.set( 200, -100, - 200 );
 				object.scale.multiplyScalar( 2 );
 				scene.add( object );
 
